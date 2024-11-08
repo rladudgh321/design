@@ -11,3 +11,14 @@
 
 **/dist/*
 dist
+
+.bashrc
+my-ca.crt
+my-key.key
+
+yarn config set proxy http://127.0.0.1:3000
+yarn config set https-proxy http://127.0.0.1:3000
+
+
+.nx/cache
+.nx/workspace-data

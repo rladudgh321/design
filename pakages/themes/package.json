@@ -3,26 +3,25 @@
   "version": "0.0.0",
   "type": "module",
   "main": "dist/index.js",
-  "exports":{
+  "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
-    }
+    },
+    "./themes.css": "./dist/themes.css"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run clean && npm run build:js && npm run build:type && npm run build:css",
-    "build:watch": "npm run build:js--watch",
+    "build": "yarn clean && yarn build:js && yarn build:type && yarn build:css",
+    "build:watch": "yarn build:js--watch",
     "build:js": "node build.js --dev",
-    "build:type":"tsc --emitDeclarationOnly",
+    "build:type": "tsc --emitDeclarationOnly",
     "build:css": "node ./scripts/build-css-module.js",
     "clean": "rm -rf dist"
   },
-  "dependencies": {
-    "esbuild": "^0.16.17"
-  },
   "devDependencies": {
+    "@kyh/esbuild-config": "workspace:^",
     "typescript": "^5.6.3"
   }
 }
