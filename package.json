@@ -10,7 +10,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "nx build",
-    "graph": "nx run-many --target=build --graph"
+    "graph": "nx run-many --target=build --graph",
+    "dev:storybook": "nx storybook @kyh/storybook",
+    "dev:pakages": "nx run-many --target=dev --projects='@kyh/react-components-*'",
+    "dev:all": "yarn dev:storybook & yarn dev:pakages"
   },
   "author": "kyh",
   "license": "MIT",

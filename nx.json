@@ -3,7 +3,7 @@
   "defaultBase": "main",
   "workspaceLayout": {
     "appsDir": "services",
-    "libsDir": "packages"
+    "libsDir": "pakages"
   },
   "tasksRunnerOptions": {
     "default": {
